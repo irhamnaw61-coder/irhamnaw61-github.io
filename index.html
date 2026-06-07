@@ -5,6 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Portofolio Wahyu Irhamna</title>
 	<link rel="stylesheet"href="2.css">
+	<style>
+‎ /* Kode khusus ngerapihin isi kartu produk biar gak pencong di HP */
+‎ .product-card h3 { font-size: 11px !important; line-height: 1.2 !important; }
+‎ .product-card .price { font-size: 12px !important; }
+‎ .product-card .rating, .product-card .sales, .product-card span { font-size: 9px !important; }
+‎ .product-card .btn-wa { font-size: 10px !important; padding: 5px 2px !important; width: 100% !important; display: block !important; }
+‎</style>
 </head>
 
 	<script src="3.js"defer></script>
@@ -168,7 +175,8 @@
             <p>Simulasi tampilan display produk mandiri yang dinamis setelah pembersihan dari sistem marketplace.</p>
             
             <!-- Grid Produk ala Shopee (10 Jersey) -->
-            <div class="shopee-grid">
+            <div class="shopee-grid" style="display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 8px !important; padding: 6px !important; width: 100% !important;">
+‎
                 
                 <!-- Produk 1 -->
                 <div class="product-card">
