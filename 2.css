@@ -712,18 +712,19 @@ p { color: var(--text-muted); margin-bottom: 15px; }
     }
 }
 
-/* Kodingan khusus biar di HP otomatis berjejer 2 kolom */
+/* Kodingan khusus biar katalog jersey berjejer 3 di HP */
 @media (max-width: 600px) {
-  .product-grid, .container-produk, .products-container { 
+  .shopee-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
-    padding: 10px !important;
+    /* Angka 3 di bawah ini yang bikin kodenya membagi layar jadi 3 kolom */
+    grid-template-columns: repeat(3, 1fr) !important; 
+    gap: 8px !important; /* Jarak antar kotak dikecilin dikit biar muat */
+    padding: 6px !important;
   }
 
-  /* Biar ukuran tulisan dan gambar produknya pas & ga kebesaran */
-  .product-card, .kotak-produk {
+  .product-card {
     width: 100% !important;
     margin: 0 !important;
+    box-sizing: border-box !important;
   }
 }
