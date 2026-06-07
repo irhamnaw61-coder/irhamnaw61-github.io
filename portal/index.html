@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naradika.com - Berita Terkini, Akurat dan Terpercaya</title>
+    <!-- Menghubungkan ke baju desain CSS yang sama -->
+    <link rel="stylesheet" href="gaya.css">
+</head>
+    <script src="script.js" defer></script>
+<body>
+
+    <!-- ==================================================== -->
+    <!-- 1. HEADER UTAMA (STICKY MENU) ALA FOTO 1000118827.jpg -->
+    <!-- ==================================================== -->
+    <header class="detik-header">
+        <div class="header-left">
+            <!-- Tombol Hamburger (Garis Tiga) -->
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="header-center">
+            <!-- Logo Naradika Dua Warna Khas Detik -->
+            <a href="index.html" class="logo-naradika">Nara<span>dika</span></a>
+        </div>
+        
+        <div class="header-right">
+            <!-- Ikon Kaca Pembesar (Search) -->
+            <span class="search-icon">🔍</span>
+        </div>
+    </header>
+
+    <!-- ==================================================== -->
+    <!-- 2. NAVIGASI KATEGORI GESER (HORIZONTAL SCROLL)      -->
+    <!-- ==================================================== -->
+    <nav class="category-nav">
+        <div class="nav-scroll">
+            <a href="#" class="nav-item active"data-category="all">Home</a>
+            <a href="#" class="nav-item"data-category="olahraga">Olahraga</a>
+            <a href="#" class="nav-item"data-category="politik">Politik</a>
+            <a href="#" class="nav-item"data-category="sosial">Sosial</a>
+            <a href="#" class="nav-item"data-category="Bisnis & finance">Bisnis & Finance</a>
+            <a href="#" class="nav-item"data-category="viral">Viral</a>
+            <a href="#" class="nav-item"data-category="terpopuler">Terpopuler</a>
+        </div>
+    </nav>
+
+    <!-- ==================================================== -->
+    <!-- 3. DAFTAR BERITA BERJEJER KE BAWAH (FOTO KIRI, TEKS KANAN) -->
+    <!-- ==================================================== -->
+    <main class="news-container">
+        
+        <!-- BERITA 1: TEMA OLAHRAGA (Mengarah ke Halaman Artikel Ronaldo-Messi) -->
+        <article class="news-card"data-item="olahraga">
+            <div class="news-img-box">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2" alt="Ronaldo Messi">
+            </div>
+            <div class="news-info">
+                <h3 class="news-title">
+                    <a href="web artikel.html">Statistik Ronaldo dan Messi di Piala Dunia, Siapa Unggul?</a>
+                </h3>
+                <span class="news-time">1 menit yang lalu</span>
+            </div>
+        </article>
+
+        <!-- BERITA 2: TEMA BISNIS -->
+        <article class="news-card"data-item="bisnis">
+            <div class="news-img-box">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3" alt="Bisnis Digital">
+            </div>
+            <div class="news-info">
+                <h3 class="news-title">
+                    <a href="#">Tren E-Commerce 2026: Strategi UMKM Lokal Bersaing di Pasar Digital Nasional</a>
+                </h3>
+                <span class="news-time">15 menit yang lalu</span>
+            </div>
+        </article>
+
+        <!-- BERITA 3: TEMA POLITIK -->
+        <article class="news-card"data-item="politik">
+            <div class="news-img-box">
+                <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c" alt="Birokrasi">
+            </div>
+            <div class="news-info">
+                <h3 class="news-title">
+                    <a href="#">Kunjungan Kerja ke Daerah, Pejabat Tekankan Pentingnya Efisiensi Birokrasi</a>
+                </h3>
+                <span class="news-time">45 menit yang lalu</span>
+            </div>
+        </article>
+
+        <!-- BERITA 4: TEMA VIRAL -->
+        <article class="news-card"data-item="viral">
+            <div class="news-img-box">
+                <img src="https://images.unsplash.com/photo-1516251193007-45ef944ab0c6" alt="Kucing Viral">
+            </div>
+            <div class="news-info">
+                <h3 class="news-title">
+                    <a href="#">Viral di Media Sosial! Aksi Heroik Seorang Pemuda Selamatkan Kucing di Atas Jembatan</a>
+                </h3>
+                <span class="news-time">1 jam yang lalu</span>
+            </div>
+        </article>
+
+        <!-- BERITA 5: TEMA SOSIAL -->
+        <article class="news-card"data-item="sosial">
+            <div class="news-img-box">
+                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433" alt="Aksi Sosial">
+            </div>
+            <div class="news-info">
+                <h3 class="news-title">
+                    <a href="#">Komunitas Pemuda Bogor Gelar Aksi Sosial Berbagi Sarapan Gratis Setiap Jumat</a>
+                </h3>
+                <span class="news-time">2 jam yang lalu</span>
+            </div>
+        </article>
+
+    </main>
+
+</body>
+</html>

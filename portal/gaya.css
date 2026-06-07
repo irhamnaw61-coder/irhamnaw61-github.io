@@ -1,0 +1,303 @@
+/* ==========================================================================
+   1. RESET & GAYA UMUM (FONT & WARNA DASAR)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4; /* Latar belakang abu-abu soft khas portal berita */
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Pembungkus utama biar ukuran web pas dengan layar HP (Maksimal 600px ala Mobile Web) */
+.detik-header, .category-nav, .news-container, .article-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   2. HEADER UTAMA (STICKY MENU) ALA FOTO 1000118827.jpg
+   ========================================================================== */
+.detik-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Tombol Hamburger (Garis Tiga) di Kiri */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #003366; /* Biru Dongker Detik */
+    border-radius: 2px;
+}
+
+/* Logo Naradika Dua Warna di Tengah */
+.logo-naradika {
+    font-size: 24px;
+    font-weight: 800;
+    color: #003366; /* Warna utama biru */
+    letter-spacing: -1px;
+}
+
+.logo-naradika span {
+    color: #46a049; /* Kombinasi warna kedua hijau/oranye aksen */
+}
+
+.search-icon {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   3. NAVIGASI KATEGORI GESER (HORIZONTAL SCROLL)
+   ========================================================================== */
+.category-nav {
+    border-bottom: 1px solid #e0e0e0;
+    overflow: hidden;
+}
+
+.nav-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 5px;
+    scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
+}
+
+.nav-scroll::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar di Chrome/Safari */
+}
+
+.nav-item {
+    padding: 5px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #555555;
+    flex-shrink: 0;
+}
+
+.nav-item.active {
+    color: #003366; /* Warna aktif biru dongker */
+    position: relative;
+}
+
+/* ==========================================================================
+   4. HALAMAN UTAMA: DAFTAR BERITA (FOTO KIRI, TEKS KANAN) ALA FOTO 1000118827.jpg
+   ========================================================================== */
+.news-container {
+    padding: 10px 0;
+    min-height: 100vh;
+}
+
+.news-card {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #ffffff;
+}
+
+/* Box Foto Kotak Sebelah Kiri */
+.news-img-box {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    margin-right: 15px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.news-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Info Judul & Waktu Sebelah Kanan */
+.news-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-title {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #222222;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Batasi maksimal 3 baris teks judul */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news-title a:hover {
+    color: #003366;
+}
+
+.news-time {
+    font-size: 12px;
+    color: #888888;
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+   5. HALAMAN BACA ARTIKEL: DETAIL ISI BERITA ALA FOTO 1000118828.jpg
+   ========================================================================== */
+.article-container {
+    padding: 20px 15px;
+    min-height: 100vh;
+}
+
+/* Super Judul Kategori Atas (Oranye) */
+.super-title {
+    color: #ff6600; /* Warna Oranye Khas DetikSport */
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+/* Judul Artikel Besar (Biru Dongker) */
+.article-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #003366;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+/* Meta Data Redaksi & Tanggal */
+.article-meta {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.article-meta .author {
+    font-weight: 700;
+}
+
+.article-meta .publisher {
+    color: #ff6600;
+}
+
+.article-meta .publish-date {
+    color: #999999;
+    margin-top: 2px;
+}
+
+/* Bagian Tombol Share Sosial Media */
+.share-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    border-top: 1px solid #eeeeee;
+    padding-top: 15px;
+}
+
+.share-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #666666;
+    letter-spacing: 1px;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.share-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Warna Media Sosial */
+.share-btn.fb { background-color: #3b5998; }
+.share-btn.tw { background-color: #000000; }
+.share-btn.wa { background-color: #25d366; }
+
+/* Tombol Komentar */
+.comment-box-btn {
+    margin-bottom: 20px;
+}
+
+.btn-comment {
+    background-color: #f6f6f6;
+    border: 1px solid #dddddd;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #444444;
+}
+
+/* Foto Utama Melintang Panjang */
+.article-main-img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.article-main-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Teks Paragraf Isi Berita */
+.article-body p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.article-body p strong {
+    color: #000000;
+}
+
+.news-card.hide {
+    display: none !important;
+}

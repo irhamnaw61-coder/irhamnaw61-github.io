@@ -1,0 +1,713 @@
+:root {
+    --bg-main: #f4f6f8;       /* Background abu-abu sangat muda */
+    --bg-card: #ffffff;       /* Putih bersih untuk kotak/card */
+    --text-primary: #1e293b;  /* Hitam arang untuk teks utama */
+    --text-muted: #64748b;    /* Abu-abu untuk teks pendukung */
+    --accent-color: #1e3a8a;  /* Biru Navy elegan untuk tombol/link */
+    --accent-hover: #3b82f6;  /* Biru terang pas kursor lewat */
+    --border-color: #e2e8f0;  /* Garis batas tipis yang soft */
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1000px; /* Diperlebar sedikit agar 4 kolom jersey muat pas */
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. STYLING KEPALA PROFIL (Header)
+   ========================================================================== */
+.profile-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 30px;
+}
+
+.profile-avatar img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--border-color);
+}
+
+.profile-info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.profile-info .tagline {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.profile-info .meta-info {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.btn-linkedin {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-linkedin:hover { text-decoration: underline; color: var(--accent-hover); }
+
+/* ==========================================================================
+   3. STYLING SECTION UMUM
+   ========================================================================== */
+.section {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 30px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+h2 {
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+h3 { font-size: 1.15rem; margin-bottom: 10px; }
+p { color: var(--text-muted); margin-bottom: 15px; }
+
+/* List Experience */
+.exp-list { list-style: none; }
+.exp-list li { padding: 12px 0; border-bottom: 1px dashed var(--border-color); }
+.exp-list a { color: var(--accent-color); text-decoration: none; font-weight: 600; }
+.exp-list a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+/* Layout Grid 2 Kolom untuk Edukasi & Skill */
+.grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.edu-box ol, .skills-box ul { padding-left: 20px; color: var(--text-muted); }
+.edu-box li, .skills-box li { margin-bottom: 8px; }
+
+/* ==========================================================================
+   4. STYLING JAVASCRIPT FILTER BUTTONS
+   ========================================================================== */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.btn-filter {
+    background-color: #e2e8f0;
+    color: var(--text-primary);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.btn-filter:hover { background-color: #cbd5e1; }
+.btn-filter.active { background-color: var(--accent-color); color: white; }
+
+/* Class bantuan untuk JS Menyembunyikan Elemen */
+.hidden { display: none !important; }
+
+/* ==========================================================================
+   5. DETAK JANTUNG PORTOFOLIO 1: TABEL MODERN (YOUTUBE)
+   ========================================================================== */
+.table-responsive { overflow-x: auto; margin-top: 15px; }
+.modern-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left; }
+.modern-table th, .modern-table td { padding: 12px; border-bottom: 1px solid var(--border-color); }
+.modern-table th { background-color: #f8fafc; color: var(--text-primary); font-weight: 600; }
+.txt-green { color: #16a34a; font-weight: 600; }
+.txt-orange { color: #ea580c; font-weight: 600; }
+.status-badge { padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500; }
+.status-badge.success { background: #dcfce7; color: #15803d; }
+.status-badge.warning { background: #fef3c7; color: #92400e; }
+
+/* ==========================================================================
+   6. DETAK JANTUNG PORTOFOLIO 2: KATALOG JERSEY ALA SHOPEE (GRID)
+   ========================================================================== */
+.shopee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Responsif otomatis mengisi ruang harian */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: #cbd5e1;
+}
+
+.prod-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    background-color: #f1f5f9;
+}
+
+.prod-info {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.prod-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+    height: 2.8em; /* Batasi tinggi teks judul biar sejajar */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 8px;
+}
+
+.prod-price {
+    font-size: 1rem;
+    color: #ee4d2d; /* Warna merah orange khas harga e-commerce */
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.prod-rating {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.btn-buy-wa {
+    display: block;
+    text-align: center;
+    background-color: #25d366; /* Warna Hijau WhatsApp */
+    color: white;
+    text-decoration: none;
+    padding: 6px 0;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.btn-buy-wa:hover { background-color: #20ba56; }
+
+/* ==========================================================================
+   7. DETAK JANTUNG PORTOFOLIO 3 & 4: FORM & INTERAKSI PORTAL BERITA
+   ========================================================================== */
+.modern-form { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 0.9rem; font-weight: 600; }
+
+.modern-form input[type="text"], .modern-form select, .modern-form textarea {
+    width: 100%; padding: 10px; border: 1px solid var(--border-color);
+    border-radius: 6px; font-family: inherit; font-size: 0.95rem;
+    background-color: #f8fafc; transition: all 0.2s;
+}
+
+.modern-form input:focus, .modern-form select:focus, .modern-form textarea:focus {
+    outline: none; border-color: var(--accent-color); box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.radio-group { display: flex; gap: 20px; align-items: center; margin-top: 4px; }
+.radio-group label { font-weight: 500; cursor: pointer; }
+
+#btn-hitung-kredit, #btn-submit-hrd {
+    background-color: var(--accent-color); color: white; border: none;
+    padding: 12px; font-size: 0.95rem; font-weight: 600; border-radius: 6px;
+    cursor: pointer; transition: background 0.2s;
+}
+#btn-hitung-kredit:hover, #btn-submit-hrd:hover { background-color: var(--accent-hover); }
+
+/* Box Hasil Simulasi */
+.result-box {
+    margin-top: 20px; padding: 15px; border-radius: 6px;
+    border-left: 5px solid #cbd5e1; background-color: #f8fafc;
+}
+.result-box.success { border-left-color: #16a34a; background-color: #f0fdf4; }
+.result-box.warning { border-left-color: #eab308; background-color: #fefce8; }
+.result-box.danger { border-left-color: #dc2626; background-color: #fef2f2; }
+
+/* Headline Portal Berita */
+.headline-portal-box {
+    background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+    padding: 25px; border-radius: 8px; border: 1px solid var(--border-color); margin-top: 15px;
+}
+.btn-goto-portal {
+    display: inline-block; background-color: var(--accent-color); color: white;
+    text-decoration: none; padding: 10px 20px; border-radius: 6px;
+    font-weight: 600; font-size: 0.9rem; margin-top: 15px; transition: background 0.2s;
+}
+.btn-goto-portal:hover { background-color: var(--accent-hover); }
+
+/* Responsive Layar HP */
+@media (max-width: 600px) {
+    .profile-header { flex-direction: column; text-align: center; }
+    .grid-2col { grid-template-columns: 1fr; }
+    .shopee-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+}
+/* ==========================================================================
+   1. RESET & VARIABEL UTAMA (The Executive Minimalist)
+   ========================================================================== */
+:root {
+    --bg-main: #f4f6f8;       /* Background abu-abu sangat muda */
+    --bg-card: #ffffff;       /* Putih bersih untuk kotak/card */
+    --text-primary: #1e293b;  /* Hitam arang untuk teks utama */
+    --text-muted: #64748b;    /* Abu-abu untuk teks pendukung */
+    --accent-color: #1e3a8a;  /* Biru Navy elegan untuk tombol/link */
+    --accent-hover: #3b82f6;  /* Biru terang pas kursor lewat */
+    --border-color: #e2e8f0;  /* Garis batas tipis yang soft */
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1000px; /* Diperlebar sedikit agar 4 kolom jersey muat pas */
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. STYLING KEPALA PROFIL (Header)
+   ========================================================================== */
+.profile-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 30px;
+}
+
+.profile-avatar img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--border-color);
+}
+
+.profile-info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.profile-info .tagline {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.profile-info .meta-info {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.btn-linkedin {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-linkedin:hover { text-decoration: underline; color: var(--accent-hover); }
+
+/* ==========================================================================
+   3. STYLING SECTION UMUM
+   ========================================================================== */
+.section {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 30px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+h2 {
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+h3 { font-size: 1.15rem; margin-bottom: 10px; }
+p { color: var(--text-muted); margin-bottom: 15px; }
+
+/* List Experience */
+.exp-list { list-style: none; }
+.exp-list li { padding: 12px 0; border-bottom: 1px dashed var(--border-color); }
+.exp-list a { color: var(--accent-color); text-decoration: none; font-weight: 600; }
+.exp-list a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+/* Layout Grid 2 Kolom untuk Edukasi & Skill */
+.grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.edu-box ol, .skills-box ul { padding-left: 20px; color: var(--text-muted); }
+.edu-box li, .skills-box li { margin-bottom: 8px; }
+
+/* ==========================================================================
+   4. STYLING JAVASCRIPT FILTER BUTTONS
+   ========================================================================== */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.btn-filter {
+    background-color: #e2e8f0;
+    color: var(--text-primary);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.btn-filter:hover { background-color: #cbd5e1; }
+.btn-filter.active { background-color: var(--accent-color); color: white; }
+
+/* Class bantuan untuk JS Menyembunyikan Elemen */
+.hidden { display: none !important; }
+
+/* ==========================================================================
+   5. DETAK JANTUNG PORTOFOLIO 1: TABEL MODERN (YOUTUBE)
+   ========================================================================== */
+.table-responsive { overflow-x: auto; margin-top: 15px; }
+.modern-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left; }
+.modern-table th, .modern-table td { padding: 12px; border-bottom: 1px solid var(--border-color); }
+.modern-table th { background-color: #f8fafc; color: var(--text-primary); font-weight: 600; }
+.txt-green { color: #16a34a; font-weight: 600; }
+.txt-orange { color: #ea580c; font-weight: 600; }
+.status-badge { padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500; }
+.status-badge.success { background: #dcfce7; color: #15803d; }
+.status-badge.warning { background: #fef3c7; color: #92400e; }
+
+/* ==========================================================================
+   6. DETAK JANTUNG PORTOFOLIO 2: KATALOG JERSEY ALA SHOPEE (GRID)
+   ========================================================================== */
+.shopee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Responsif otomatis mengisi ruang harian */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: #cbd5e1;
+}
+
+.prod-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    background-color: #f1f5f9;
+}
+
+.prod-info {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.prod-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+    height: 2.8em; /* Batasi tinggi teks judul biar sejajar */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 8px;
+}
+
+.prod-price {
+    font-size: 1rem;
+    color: #ee4d2d; /* Warna merah orange khas harga e-commerce */
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.prod-rating {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.btn-buy-wa {
+    display: block;
+    text-align: center;
+    background-color: #25d366; /* Warna Hijau WhatsApp */
+    color: white;
+    text-decoration: none;
+    padding: 6px 0;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.btn-buy-wa:hover { background-color: #20ba56; }
+
+/* ==========================================================================
+   7. DETAK JANTUNG PORTOFOLIO 3 & 4: FORM & INTERAKSI PORTAL BERITA
+   ========================================================================== */
+.modern-form { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 0.9rem; font-weight: 600; }
+
+.modern-form input[type="text"], .modern-form select, .modern-form textarea {
+    width: 100%; padding: 10px; border: 1px solid var(--border-color);
+    border-radius: 6px; font-family: inherit; font-size: 0.95rem;
+    background-color: #f8fafc; transition: all 0.2s;
+}
+
+.modern-form input:focus, .modern-form select:focus, .modern-form textarea:focus {
+    outline: none; border-color: var(--accent-color); box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.radio-group { display: flex; gap: 20px; align-items: center; margin-top: 4px; }
+.radio-group label { font-weight: 500; cursor: pointer; }
+
+#btn-hitung-kredit, #btn-submit-hrd {
+    background-color: var(--accent-color); color: white; border: none;
+    padding: 12px; font-size: 0.95rem; font-weight: 600; border-radius: 6px;
+    cursor: pointer; transition: background 0.2s;
+}
+#btn-hitung-kredit:hover, #btn-submit-hrd:hover { background-color: var(--accent-hover); }
+
+/* Box Hasil Simulasi */
+.result-box {
+    margin-top: 20px; padding: 15px; border-radius: 6px;
+    border-left: 5px solid #cbd5e1; background-color: #f8fafc;
+}
+.result-box.success { border-left-color: #16a34a; background-color: #f0fdf4; }
+.result-box.warning { border-left-color: #eab308; background-color: #fefce8; }
+.result-box.danger { border-left-color: #dc2626; background-color: #fef2f2; }
+
+/* Headline Portal Berita */
+.headline-portal-box {
+    background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+    padding: 25px; border-radius: 8px; border: 1px solid var(--border-color); margin-top: 15px;
+}
+.btn-goto-portal {
+    display: inline-block; background-color: var(--accent-color); color: white;
+    text-decoration: none; padding: 10px 20px; border-radius: 6px;
+    font-weight: 600; font-size: 0.9rem; margin-top: 15px; transition: background 0.2s;
+}
+.btn-goto-portal:hover { background-color: var(--accent-hover); }
+
+/* Responsive Layar HP */
+@media (max-width: 600p
+
+
+    .workflow-box {
+    margin-top: 25px;
+    background-color: #f8fafc; /* Senada dengan bg table th lu */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.workflow-box h3 {
+    margin-top: 0;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.workflow-list {
+    list-style-type: square;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.workflow-list li {
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+.workflow-list strong {
+    color: var(--text-primary);
+}
+
+/* Galeri Bukti Tangkapan Layar (Pending) */
+.proof-gallery {
+    margin-top: 25px;
+}
+
+.proof-gallery h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.photo-placeholder {
+    border: 2px dashed #cbd5e1; /* Batas putus-putus */
+    padding: 25px 20px;
+    text-align: center;
+    flex: 1;
+    border-radius: 8px;
+    color: var(--text-muted);
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.photo-placeholder:hover {
+    border-color: var(--accent-hover);
+    background-color: #ffffff;
+    box-shadow: var(--shadow-soft);
+}
+
+/* Penyelaras Responsif HP untuk Galeri */
+@media (max-width: 600px) {
+    .gallery-grid {
+        flex-direction: column;
+    }
+}
+
+
+.form-row {
+    display: flex;
+    gap: 20px; /* Jarak antar kolom */
+    margin-bottom: 15px;
+}
+
+.form-row .form-group {
+    flex: 1; /* Membagi dua kolom sama rata */
+    margin-top: 0 !important; /* Reset margin bawaan form-group lama */
+}
+
+.form-group.full-width {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Penyelaras input bertipe number agar seragam dengan select & text */
+.modern-form input[type="number"] {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid var(--border-color);
+    border-radius: 6px; 
+    font-family: inherit; 
+    font-size: 0.95rem;
+    background-color: #f8fafc; 
+    transition: all 0.2s;
+}
+.modern-form input[type="number"]:focus {
+    outline: none; 
+    border-color: var(--accent-color); 
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+/* Responsif: Jika layar HP (di bawah 600px), kolom sejajar otomatis menekuk ke bawah */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
