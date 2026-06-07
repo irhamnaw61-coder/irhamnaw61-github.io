@@ -712,19 +712,18 @@ p { color: var(--text-muted); margin-bottom: 15px; }
     }
 }
 
-/* Kodingan khusus biar katalog jersey berjejer 3 di HP */
-@media (max-width: 600px) {
-  .shopee-grid {
-    display: grid !important;
-    /* Angka 3 di bawah ini yang bikin kodenya membagi layar jadi 3 kolom */
-    grid-template-columns: repeat(3, 1fr) !important; 
-    gap: 8px !important; /* Jarak antar kotak dikecilin dikit biar muat */
-    padding: 6px !important;
-  }
+} 
 
-  .product-card {
-    width: 100% !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-  }
+/* Kodingan mutlak tanpa media query biar langsung jebol di HP */
+.shopee-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important; 
+  gap: 8px !important; 
+  padding: 6px !important;
+} 
+
+.product-card {
+  width: 100% !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
 }
