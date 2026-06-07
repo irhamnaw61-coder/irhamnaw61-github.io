@@ -711,3 +711,19 @@ p { color: var(--text-muted); margin-bottom: 15px; }
         gap: 15px;
     }
 }
+
+/* Kodingan khusus biar di HP otomatis berjejer 2 kolom */
+@media (max-width: 600px) {
+  .product-grid, .container-produk, .products-container { 
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    padding: 10px !important;
+  }
+
+  /* Biar ukuran tulisan dan gambar produknya pas & ga kebesaran */
+  .product-card, .kotak-produk {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
