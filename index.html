@@ -8,8 +8,18 @@
 </head>
 
 	<script src="3.js"defer></script>
-
+	
 <body>
+
+	<div id="mobile-warning" style="background: #ffcc00; padding: 10px; text-align: center; font-size: 12px; font-weight: bold; display: none;">
+  Disarankan menggunakan Mode Desktop untuk tampilan terbaik.
+</div>
+
+<script>
+  if (window.innerWidth < 768) {
+    document.getElementById('mobile-warning').style.display = 'block';
+  }
+</script>
 
 	 <div class="container">
         <!-- 1. BAGIAN PROFIL UTAMA -->
