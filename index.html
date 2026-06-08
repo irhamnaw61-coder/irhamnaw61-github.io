@@ -11,11 +11,20 @@
 	
 <body>
 
-	<div id="mobile-warning" style="background: #1a2a6c; color: #ffffff; padding: 10px 0; text-align: center; font-size: 13px; font-weight: 800; border-bottom: 3px solid #ffcc00; display: none; overflow: hidden; white-space: nowrap;">
-  <div style="display: inline-block; animation: marquee 15s linear infinite;">
-    ⚠️ DISARANKAN MENGGUNAKAN MODE DESKTOP UNTUK TAMPILAN TERBAIK! ——— JANGAN LUPA CEK VERSI DESKTOP YA!
+	<div id="mobile-warning" style="background: #1a2a6c; color: #ffffff; padding: 10px 0; text-align: center; font-size: 13px; font-weight: 800; border-bottom: 3px solid #ffcc00; display: block; overflow: hidden; white-space: nowrap; width: 100%;">
+  <div style="display: inline-block; white-space: nowrap; animation: marquee 10s linear infinite;">
+    ⚠️ DISARANKAN MENGGUNAKAN MODE DESKTOP UNTUK TAMPILAN TERBAIK! ——— CEK VERSI DESKTOP YA!
   </div>
 </div>
+
+<style>
+  /* Kita pasang di sini supaya browser langsung kenal animasinya */
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+</style>
+
 
 <style>
   @keyframes marquee {
