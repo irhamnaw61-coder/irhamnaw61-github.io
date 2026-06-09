@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arsip Portofolio - Wahyu Irhamna</title>
+    
+    <style>
+        body {
+            background-color: #f4f6f8;
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #1e293b;
+        }
+
+        .container {
+            padding: 30px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .btn-back {
+            background-color: #64748b;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .btn-back:hover {
+            background-color: #475569;
+            transform: translateY(-1px);
+        }
+
+        .section-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            margin-top: 15px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .desc-text {
+            font-size: 1rem;
+            color: #64748b;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .gallery-static {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px;
+        }
+
+        .gallery-static-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            display: none; 
+        }
+
+        /* EFEK KLIK: Kursor berubah jadi tangan menunjuk */
+        .gallery-static-item a {
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .gallery-static-item img {
+            width: 100%;
+            height: 170px; 
+            object-fit: cover; 
+            display: block;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery-static-item img:hover {
+            transform: scale(1.04); 
+        }
+
+        /* BOX INFO DI BAWAH FOTO */
+        .gallery-info {
+            padding: 12px;
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .gallery-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+
+        /* GAYA TEKS KETERANGAN FOTO */
+        .gallery-desc {
+            font-size: 0.8rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-static {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .gallery-static-item img {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div>
+            <a href="index.html" class="btn-back">← Kembali ke Portfolio Utama</a>
+        </div>
+        
+        <section class="section-box">
+            <h2 id="arsip-title">Arsip Dokumentasi</h2>
+            <p id="arsip-desc" class="desc-text">Berikut adalah dokumentasi lengkap dari portofolio saya.</p>
+            
+            <div class="gallery-static">
+                
+                <!-- ====================================================
+                     === KELOMPOK YOUTUBE (Silakan edit teks keterangan) ===
+                     ==================================================== -->
+                <div class="gallery-static-item item-youtube">
+                    <a href="Yutub/youtube1.png" target="_blank">
+                        <img src="Yutub/youtube1.png" loading="lazy" alt="YouTube 1">
+                        <div class="gallery-info">
+                            <div class="gallery-label">youtube1.png</div>
+                            <div class="gallery-desc">Tampilan beranda utama analisis performa video channel.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-youtube">
+                    <a href="Yutub/youtube2.jpg" target="_blank">
+                        <img src="Yutub/youtube2.jpg" loading="lazy" alt="YouTube 2">
+                        <div class="gallery-info">
+                            <div class="gallery-label">youtube2.jpg</div>
+                            <div class="gallery-desc">Grafik pertumbuhan penayangan dan retensi penonton bulanan.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-youtube">
+                    <a href="Yutub/youtube3.jpg" target="_blank">
+                        <img src="Yutub/youtube3.jpg" loading="lazy" alt="YouTube 3">
+                        <div class="gallery-info">
+                            <div class="gallery-label">youtube3.jpg</div>
+                            <div class="gallery-desc">Data sumber lalu lintas utama (Traffic Sources) penonton.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-youtube">
+                    <a href="Yutub/youtube4.jpg" target="_blank">
+                        <img src="Yutub/youtube4.jpg" loading="lazy" alt="YouTube 4">
+                        <div class="gallery-info">
+                            <div class="gallery-label">youtube4.jpg</div>
+                            <div class="gallery-desc">Statistik capaian real-time penayangan dalam 48 jam terakhir.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-youtube">
+                    <a href="Yutub/youtube5.jpg" target="_blank">
+                        <img src="Yutub/youtube5.jpg" loading="lazy" alt="YouTube 5">
+                        <div class="gallery-info">
+                            <div class="gallery-label">youtube5.jpg</div>
+                            <div class="gallery-desc">Rekomendasi sistem Shorts dan interaksi penonton unik.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-youtube">
+                    <a href="Yutub/youtube6.jpg" target="_blank">
+                        <img src="Yutub/youtube6.jpg" loading="lazy" alt="YouTube 6">
+                        <div class="gallery-info">
+                            <div class="gallery-label">youtube6.jpg</div>
+                            <div class="gallery-desc">Analisis rasio klik-tayang tayangan (CTR) konten video.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-youtube">
+                    <a href="Yutub/youtube7.jpg" target="_blank">
+                        <img src="Yutub/youtube7.jpg" loading="lazy" alt="YouTube 7">
+                        <div class="gallery-info">
+                            <div class="gallery-label">youtube7.jpg</div>
+                            <div class="gallery-desc">Demografi wilayah dan usia penonton paling aktif.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-youtube">
+                    <a href="Yutub/youtube8.jpg" target="_blank">
+                        <img src="Yutub/youtube8.jpg" loading="lazy" alt="YouTube 8">
+                        <div class="gallery-info">
+                            <div class="gallery-label">youtube8.jpg</div>
+                            <div class="gallery-desc">Durasi tonton rata-average (Watch Time) per sesi.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-youtube">
+                    <a href="Yutub/youtube9.jpg" target="_blank">
+                        <img src="Yutub/youtube9.jpg" loading="lazy" alt="YouTube 9">
+                        <div class="gallery-info">
+                            <div class="gallery-label">youtube9.jpg</div>
+                            <div class="gallery-desc">Laporan grafis rasio pelanggan (Subscribers) baru.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-youtube">
+                    <a href="Yutub/youtube10.jpg" target="_blank">
+                        <img src="Yutub/youtube10.jpg" loading="lazy" alt="YouTube 10">
+                        <div class="gallery-info">
+                            <div class="gallery-label">youtube10.jpg</div>
+                            <div class="gallery-desc">Ringkasan total pendapatan dan estimasi performa monetisasi.</div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- ==========================================================
+                     === KELOMPOK CONTENT WRITER (Total Lengkap 33 Foto) ===
+                     ========================================================== -->
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara1.jpg" target="_blank">
+                        <img src="medias/suara1.jpg" loading="lazy" alt="Artikel 1">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara1.jpg</div>
+                            <div class="gallery-desc">Kliping artikel berita olah raga sepak bola nasional di Suara.com.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara2.jpg" target="_blank">
+                        <img src="medias/suara2.jpg" loading="lazy" alt="Artikel 2">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara2.jpg</div>
+                            <div class="gallery-desc">Laporan statistik performa views artikel berita yang berhasil rilis.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara3.jpg" target="_blank">
+                        <img src="medias/suara3.jpg" loading="lazy" alt="Artikel 3">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara3.jpg</div>
+                            <div class="gallery-desc">Bukti dasbor kontributor artikel jurnalisme independen.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara4.jpg" target="_blank">
+                        <img src="medias/suara4.jpg" loading="lazy" alt="Artikel 4">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara4.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara5.jpg" target="_blank">
+                        <img src="medias/suara5.jpg" loading="lazy" alt="Artikel 5">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara5.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara6.jpg" target="_blank">
+                        <img src="medias/suara6.jpg" loading="lazy" alt="Artikel 6">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara6.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara7.jpg" target="_blank">
+                        <img src="medias/suara7.jpg" loading="lazy" alt="Artikel 7">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara7.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara8.jpg" target="_blank">
+                        <img src="medias/suara8.jpg" loading="lazy" alt="Artikel 8">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara8.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara9.jpg" target="_blank">
+                        <img src="medias/suara9.jpg" loading="lazy" alt="Artikel 9">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara9.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara10.jpg" target="_blank">
+                        <img src="medias/suara10.jpg" loading="lazy" alt="Artikel 10">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara10.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara11.jpg" target="_blank">
+                        <img src="medias/suara11.jpg" loading="lazy" alt="Artikel 11">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara11.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara12.jpg" target="_blank">
+                        <img src="medias/suara12.jpg" loading="lazy" alt="Artikel 12">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara12.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara13.jpg" target="_blank">
+                        <img src="medias/suara13.jpg" loading="lazy" alt="Artikel 13">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara13.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara14.jpg" target="_blank">
+                        <img src="medias/suara14.jpg" loading="lazy" alt="Artikel 14">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara14.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara15.jpg" target="_blank">
+                        <img src="medias/suara15.jpg" loading="lazy" alt="Artikel 15">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara15.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara16.jpg" target="_blank">
+                        <img src="medias/suara16.jpg" loading="lazy" alt="Artikel 16">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara16.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara17.jpg" target="_blank">
+                        <img src="medias/suara17.jpg" loading="lazy" alt="Artikel 17">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara17.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara18.jpg" target="_blank">
+                        <img src="medias/suara18.jpg" loading="lazy" alt="Artikel 18">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara18.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara19.jpg" target="_blank">
+                        <img src="medias/suara19.jpg" loading="lazy" alt="Artikel 19">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara19.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara20.jpg" target="_blank">
+                        <img src="medias/suara20.jpg" loading="lazy" alt="Artikel 20">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara20.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara21.jpg" target="_blank">
+                        <img src="medias/suara21.jpg" loading="lazy" alt="Artikel 21">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara21.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara22.jpg" target="_blank">
+                        <img src="medias/suara22.jpg" loading="lazy" alt="Artikel 22">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara22.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara23.jpg" target="_blank">
+                        <img src="medias/suara23.jpg" loading="lazy" alt="Artikel 23">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara23.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara24.jpg" target="_blank">
+                        <img src="medias/suara24.jpg" loading="lazy" alt="Artikel 24">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara24.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara25.jpg" target="_blank">
+                        <img src="medias/suara25.jpg" loading="lazy" alt="Artikel 25">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara25.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara26.jpg" target="_blank">
+                        <img src="medias/suara26.jpg" loading="lazy" alt="Artikel 26">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara26.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara27.jpg" target="_blank">
+                        <img src="medias/suara27.jpg" loading="lazy" alt="Artikel 27">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara27.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara28.jpg" target="_blank">
+                        <img src="medias/suara28.jpg" loading="lazy" alt="Artikel 28">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara28.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara29.jpg" target="_blank">
+                        <img src="medias/suara29.jpg" loading="lazy" alt="Artikel 29">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara29.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara30.jpg" target="_blank">
+                        <img src="medias/suara30.jpg" loading="lazy" alt="Artikel 30">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara30.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara31.jpg" target="_blank">
+                        <img src="medias/suara31.jpg" loading="lazy" alt="Artikel 31">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara31.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara32.jpg" target="_blank">
+                        <img src="medias/suara32.jpg" loading="lazy" alt="Artikel 32">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara32.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="gallery-static-item item-writer">
+                    <a href="medias/suara33.jpg" target="_blank">
+                        <img src="medias/suara33.jpg" loading="lazy" alt="Artikel 33">
+                        <div class="gallery-info">
+                            <div class="gallery-label">suara33.jpg</div>
+                            <div class="gallery-desc">Dokumentasi publikasi artikel berita dan optimasi konten media.</div>
+                        </div>
+                    </a>
+                </div>
+
+
+
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentType = urlParams.get('type') ? urlParams.get('type').toLowerCase() : '';
+
+        const youtubeItems = document.querySelectorAll('.item-youtube');
+        const writerItems = document.querySelectorAll('.item-writer');
+        const titleElement = document.getElementById('arsip-title');
+        const descElement = document.getElementById('arsip-desc');
+
+        if (currentType === 'youtube') {
+            titleElement.innerText = "Arsip Dokumentasi Analitik YouTube";
+            descElement.innerText = "Menampilkan seluruh 10 tangkapan layar manajemen data operasi dan performa analitik channel YouTube.";
+            youtubeItems.forEach(item => item.style.display = 'block');
+            writerItems.forEach(item => item.style.display = 'none');
+        } else if (currentType === 'writer') {
+            titleElement.innerText = "Arsip Portofolio Content Writer & Jurnalisme";
+            descElement.innerText = "Menampilkan seluruh kumpulan kliping digital bukti penulisan artikel berita pada portal media mandiri Suara.com.";
+            youtubeItems.forEach(item => item.style.display = 'none');
+            writerItems.forEach(item => item.style.display = 'block');
+        }
+    </script>
+</body>
+</html>
