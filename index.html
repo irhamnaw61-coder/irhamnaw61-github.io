@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Portofolio Wahyu Irhamna</title>
-	<link rel="stylesheet"href="2.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portofolio Wahyu Irhamna</title>
+    <link rel="stylesheet"href="2.css">
+    <script src="3.js"defer></script>
 </head>
 
-	<script src="3.js"defer></script>
-	
 <body>
 
-	<div id="mobile-warning" style="background: #1a2a6c; color: #ffffff; padding: 10px 0; text-align: center; font-size: 13px; font-weight: 800; border-bottom: 3px solid #ffcc00; display: block; overflow: hidden; white-space: nowrap; width: 100%;">
+    <div id="mobile-warning" style="background: #1a2a6c; color: #ffffff; padding: 10px 0; text-align: center; font-size: 13px; font-weight: 800; border-bottom: 3px solid #ffcc00; display: block; overflow: hidden; white-space: nowrap; width: 100%;">
   <div style="display: inline-block; white-space: nowrap; animation: marquee 10s linear infinite;">
     ⚠️ DISARANKAN MENGGUNAKAN MODE DESKTOP UNTUK TAMPILAN TERBAIK! ——— CEK VERSI DESKTOP YA!
   </div>
@@ -26,20 +25,13 @@
 </style>
 
 
-<style>
-  @keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
-</style>
-
 <script>
   if (window.innerWidth < 768) {
     document.getElementById('mobile-warning').style.display = 'block';
   }
 </script>
 
-	 <div class="container">
+     <div class="container">
         <!-- 1. BAGIAN PROFIL UTAMA -->
         <header class="profile-header">
             <div class="profile-avatar">
@@ -167,25 +159,12 @@
                 </ul>
             </div>
 
-            <div class="div class="proof-gallery" style="margin-top: 25px;">
-‎    <h3>Bukti Dokumentasi Analitik:</h3>
-‎    <div class="gallery-grid" style="display: flex; gap: 15px; margin-top: 10px;">
-‎        
-‎        <div class="photo-placeholder" style="border: 2px dashed #ccc; padding: 10px; text-align: center; flex: 1; border-radius: 8px; color: #888;">
-‎
-‎            <img src="gambar/analitik-youtube.jpg" alt="Dashboard YouTube Studio" style="width: 100%; height: auto; border-radius: 4px; display: block; margin-bottom: 8px;">
-‎
-‎            <p style="margin: 0; font-size: 13px; font-weight: bold; color: #333;">Foto: Dashboard YouTube Studio Halaman Analitik Penonton</p>
-‎        </div>
-‎
-‎        <div class="photo-placeholder" style="border: 2px dashed #ccc; padding: 10px; text-align: center; flex: 1; border-radius: 8px; color: #888;">
-‎            <img src="pendapatan-youtube.jpg" alt="Halaman Pendapatan YouTube" style="width: 100%; height: auto; border-radius: 4px; display: block; margin-bottom: 8px;">
-‎            <p style="margin: 0; font-size: 13px; font-weight: bold; color: #333;">Foto: Dashboard YouTube Studio Halaman Pendapatan</p>
-‎        </div>
-‎
-‎    </div>
-‎</div>
-‎
+           <h3 class="bukti-judul">Bukti Dokumentasi Analitik:</h3>
+
+        <a href="arsip.html?type=youtube" class="btn-goto-portal" style="margin-top: 15px; display: inline-block;">
+            Buka Dasbor Dokumentasi & Metrik Utama →
+        </a>
+
 
         </section>
 
@@ -200,9 +179,9 @@
                 
                 <!-- Produk 1 -->
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Jersey MU" class="prod-img">
+                    <img src="jersey/baju1.jpg" alt="Jersey Liverpool" class="prod-img">
                     <div class="prod-info">
-                        <h4 class="prod-title">Jersey MU Retro Home 2008 Grade Ori</h4>
+                        <h4 class="prod-title">Jersey Liverpool away 2022-2023 Grade Ori</h4>
                         <p class="prod-price">Rp 150.000</p>
                         <p class="prod-rating">⭐ 4.9 | Terjual 150+</p>
                         <a href="https://wa.me/6285714245604" target="_blank" class="btn-buy-wa">Beli via WA</a>
@@ -211,9 +190,9 @@
 
                 <!-- Produk 2 -->
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Jersey Madrid" class="prod-img">
+                    <img src="jersey/baju2.jpg" alt="Jersey Madrid" class="prod-img">
                     <div class="prod-info">
-                        <h4 class="prod-title">Jersey Real Madrid Home 2024/2025</h4>
+                        <h4 class="prod-title">Jersey Real Madrid Home 2022/2023 Grade original</h4>
                         <p class="prod-price">Rp 145.000</p>
                         <p class="prod-rating">⭐ 4.8 | Terjual 90+</p>
                         <a href="https://wa.me/6285714245604" target="_blank" class="btn-buy-wa">Beli via WA</a>
@@ -222,9 +201,9 @@
 
                 <!-- Produk 3 -->
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Jersey Barca" class="prod-img">
+                    <img src="jersey/baju3.jpg" alt="Jersey MU" class="prod-img">
                     <div class="prod-info">
-                        <h4 class="prod-title">Jersey Barcelona Away Nike Black Gold</h4>
+                        <h4 class="prod-title">Jersey Manchester United home 2022-2023 Grade Original</h4>
                         <p class="prod-price">Rp 155.000</p>
                         <p class="prod-rating">⭐ 5.0 | Terjual 200+</p>
                         <a href="https://wa.me/6285714245604" target="_blank" class="btn-buy-wa">Beli via WA</a>
@@ -233,9 +212,9 @@
 
                 <!-- Produk 4 -->
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Jersey Arsenal" class="prod-img">
+                    <img src="jersey/baju4.jpg" alt="Jersey Manchester City" class="prod-img">
                     <div class="prod-info">
-                        <h4 class="prod-title">Jersey Arsenal Home Klasik 2004 Henry</h4>
+                        <h4 class="prod-title">Jersey Manchester City home 2022-2023 Grade Original</h4>
                         <p class="prod-price">Rp 160.000</p>
                         <p class="prod-rating">⭐ 4.9 | Terjual 75+</p>
                         <a href="https://wa.me/6285714245604" target="_blank" class="btn-buy-wa">Beli via WA</a>
@@ -244,9 +223,9 @@
 
                 <!-- Produk 5 -->
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Jersey Chelsea" class="prod-img">
+                    <img src="jersey/baju5.jpg" alt="Jersey Arenal" class="prod-img">
                     <div class="prod-info">
-                        <h4 class="prod-title">Jersey Chelsea Home Blue Lions Premium</h4>
+                        <h4 class="prod-title">Jersey Arsenal Home 2022-2023 Grade original</h4>
                         <p class="prod-price">Rp 140.000</p>
                         <p class="prod-rating">⭐ 4.7 | Terjual 60+</p>
                         <a href="https://wa.me/6285714245604" target="_blank" class="btn-buy-wa">Beli via WA</a>
@@ -255,9 +234,9 @@
 
                 <!-- Produk 6 -->
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Jersey City" class="prod-img">
+                    <img src="jersey/baju6.jpg" alt="Jersey Chelsea" class="prod-img">
                     <div class="prod-info">
-                        <h4 class="prod-title">Jersey Man City Sky Blue Special Edition</h4>
+                        <h4 class="prod-title">Jersey Chelsea Home 2022-2023 Grade Original</h4>
                         <p class="prod-price">Rp 150.000</p>
                         <p class="prod-rating">⭐ 4.8 | Terjual 85+</p>
                         <a href="https://wa.me/6285714245604" target="_blank" class="btn-buy-wa">Beli via WA</a>
@@ -266,9 +245,9 @@
 
                 <!-- Produk 7 -->
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Jersey Juve" class="prod-img">
+                    <img src="jersey/baju7.jpg" alt="Jersey Barcelona" class="prod-img">
                     <div class="prod-info">
-                        <h4 class="prod-title">Jersey Juventus Home Bianconeri Zebra</h4>
+                        <h4 class="prod-title">Jersey Barcelona Home 2022-2023 grade Original</h4>
                         <p class="prod-price">Rp 145.000</p>
                         <p class="prod-rating">⭐ 4.6 | Terjual 40+</p>
                         <a href="https://wa.me/6285714245604" target="_blank" class="btn-buy-wa">Beli via WA</a>
@@ -277,55 +256,11 @@
 
                 <!-- Produk 8 -->
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Jersey Milan" class="prod-img">
+                    <img src="jersey/baju8.jpg" alt="Jersey PSG" class="prod-img">
                     <div class="prod-info">
-                        <h4 class="prod-title">Jersey AC Milan Home Rossoneri Klasik</h4>
+                        <h4 class="prod-title">Jersey PSG Away 2022-2023 Grade Original</h4>
                         <p class="prod-price">Rp 150.000</p>
                         <p class="prod-rating">⭐ 4.9 | Terjual 110+</p>
-                        <a href="https://wa.me/6285714245604" target="_blank" class="btn-buy-wa">Beli via WA</a>
-                    </div>
-                </div>
-
-                <!-- Produk 9 -->
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Jersey Inter" class="prod-img">
-                    <div class="prod-info">
-                        <h4 class="prod-title">Jersey Inter Milan Away Monokrom Ular</h4>
-                        <p class="prod-price">Rp 155.000</p>
-                        <p class="prod-rating">⭐ 4.8 | Terjual 95+</p>
-                        <a href="https://wa.me/6285714245604" target="_blank" class="btn-buy-wa">Beli via WA</a>
-                    </div>
-                </div>
-
-                <!-- Produk 10 -->
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Jersey Bayern" class="prod-img">
-                    <div class="prod-info">
-                        <h4 class="prod-title">Jersey Bayern Munchen Red Bavarian Olahraga</h4>
-                        <p class="prod-price">Rp 140.000</p>
-                        <p class="prod-rating">⭐ 4.7 | Terjual 55+</p>
-                        <a href="https://wa.me/6285714245604" target="_blank" class="btn-buy-wa">Beli via WA</a>
-                    </div>
-                </div>
-
-                <!-- Produk 11 -->
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Jersey Bayern" class="prod-img">
-                    <div class="prod-info">
-                        <h4 class="prod-title">Jersey Liverpool home</h4>
-                        <p class="prod-price">Rp 140.000</p>
-                        <p class="prod-rating">⭐ 4.7 | Terjual 55+</p>
-                        <a href="https://wa.me/6285714245604" target="_blank" class="btn-buy-wa">Beli via WA</a>
-                    </div>
-                </div>
-
-                <!-- Produk 12 -->
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Jersey Bayern" class="prod-img">
-                    <div class="prod-info">
-                        <h4 class="prod-title">Persib Bandung Home</h4>
-                        <p class="prod-price">Rp 140.000</p>
-                        <p class="prod-rating">⭐ 4.7 | Terjual 55+</p>
                         <a href="https://wa.me/6285714245604" target="_blank" class="btn-buy-wa">Beli via WA</a>
                     </div>
                 </div>
@@ -415,8 +350,13 @@
                     saya membangun website portal berita terpisah khusus. Klik tombol di bawah untuk melihat karya jurnalistik saya secara langsung.
                 </p>
                 <!-- Ganti '#' dengan link URL website berita lo nanti kalau sudah jadi -->
-                <a href="portal" target="_blank" class="btn-goto-portal">Kunjungi Website Portal Berita Saya →</a>
+                <a href="portal/index.html" target="_blank" class="btn-goto-portal">Kunjungi Website Portal Berita Saya →</a>
             </div>
+            <div style="margin-top: 15px;">
+    <a href="arsip.html?type=writer" target="_blank" class="btn-goto-portal" style="display: inline-block; padding: 10px 20px; box-sizing: border-box;">
+        Eksplorasi Arsip Publikasi Portal Berita →
+    </a>
+</div>
         </section>
 
         <!-- 5. FORM HUBUNGI HRD -->
