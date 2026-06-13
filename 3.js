@@ -99,3 +99,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+const gallery = document.querySelector('.youtube-gallery');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+if (nextBtn && prevBtn && gallery) {
+    nextBtn.addEventListener('click', () => {
+        const itemWidth = document.querySelector('.gallery-item').clientWidth;
+        gallery.scrollBy({ left: itemWidth * 2, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        const itemWidth = document.querySelector('.gallery-item').clientWidth;
+        gallery.scrollBy({ left: -itemWidth * 2, behavior: 'smooth' });
+    });
+}
