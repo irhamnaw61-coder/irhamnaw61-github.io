@@ -711,3 +711,25 @@ p { color: var(--text-muted); margin-bottom: 15px; }
         gap: 15px;
     }
 }
+/* "PENGUNCI" TERAKHIR: Biar CSS lain nggak bisa ikut campur */
+
+.youtube-gallery .gallery-item {
+    flex: 0 0 calc(50% - 8px) !important;
+    max-width: calc(50% - 8px) !important;
+    display: block !important; /* Paksa biar tetap di baris yang sama */
+}
+
+.youtube-gallery .gallery-item img {
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    display: block !important;
+    margin: 0 !important;
+}
+
+/* Pastiin kontainer galerinya bener-bener flex */
+.youtube-gallery {
+    display: flex !important;
+    flex-wrap: nowrap !important; /* INI KUNCI BIAR GAK TURUN KE BAWAH */
+    overflow-x: auto !important;; }
